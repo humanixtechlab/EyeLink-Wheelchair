@@ -14,7 +14,7 @@ Recommended size: 1280x720 or wider, landscape.
 -->
 ![EyeLink hero banner](docs/images/01_hero_banner.jpg)
 
-> Commercial eye-tracking wheelchair controllers cost ₹4,00,000–₹16,00,000 ($5,000–$20,000). EyeLink does the same core job for ₹2,500 using a WeMos D1 Mini, an MPU-6050, two IR blink sensors, and ESP-NOW. Tilt your head to pick a direction, blink to confirm — the wheelchair moves.
+> A standard power wheelchair base alone runs ₹2,00,000–₹5,00,000 in India. Add a dedicated eye-gaze or head-array control system (often imported) and the total can push past ₹8,00,000–₹16,00,000. EyeLink does the same core job — hands-free wheelchair control — for around ₹2,500 (~$30) using a WeMos D1 Mini, an MPU-6050, two IR blink sensors, and ESP-NOW. Tilt your head to pick a direction, blink to confirm — the wheelchair moves.
 
 <!--
 IMAGE SLOT #2 — DEMO GIF / SHORT CLIP
@@ -51,9 +51,8 @@ Full command logic, safety layers, and the comms-watchdog bug fix are documented
 
 | | |
 |---|---|
-| **Final, finished build** (seat, paint, full enclosure) | ₹2,500 (~$30) |
-| **Semi-finished / bare prototype** | ₹1,500 (~$18) |
-| **Closest commercial equivalent** | ₹4,00,000–₹16,00,000 ($5,000–$20,000) |
+| **Total cost (finished build)** | ₹2,500 (~$30) |
+| **Commercial equivalent (base chair + eye-gaze add-on, imported)** | ₹8,00,000–₹16,00,000+ (~$10,000–$20,000+) |
 
 Full itemized parts list with prices: see [Bill of Materials](docs/EyeLink_Master_Documentation.md#bill-of-materials).
 
@@ -92,6 +91,9 @@ What to make: A hand-drawn or Fritzing/EasyEDA wiring diagram for TX and one for
 
 This order matters. Skipping a step is the #1 reason a freshly cloned build "does nothing."
 
+> 📷 Step-by-step Arduino IDE screenshots for this exact flashing sequence are in [docs/EyeLink_Master_Documentation.md](docs/EyeLink_Master_Documentation.md#firmware).
+
+
 1. **Get RX's MAC address** → flash `firmware/RX_MAC_Address_Finder.ino` to the RX board, copy the printed MAC.
 2. **Paste that MAC into TX** → open `firmware/TX_Glasses_FINAL.ino`, find `rxMAC[]` near the top, paste your value.
 3. **Calibrate head-tilt** → flash `firmware/MPU6050_Calibration_Helper.ino` to TX, follow the prompts, paste the printed `#define` block into `TX_Glasses_FINAL.ino`.
@@ -127,7 +129,6 @@ Same idea — one per RX build step.
 | `firmware/MPU6050_Calibration_Helper.ino` | One-time helper — calibrates your personal head-tilt thresholds |
 | `docs/EyeLink_Master_Documentation.md` | Full build doc: BOM, wiring, assembly, calibration, safety, troubleshooting |
 | `docs/images/` | All photos/diagrams/gifs — see [IMAGE_SHOT_LIST.md](docs/IMAGE_SHOT_LIST.md) for exactly what's needed and where |
-| `script/telugu_script.txt` | Original Telugu voiceover script for the YouTube video (timestamped) |
 | `LICENSE` | MIT — free to use, modify, and even sell, with attribution appreciated |
 
 ---
