@@ -1,0 +1,56 @@
+<svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>EyeLink system overview</title>
+<desc>TX glasses with eye blink sensors, head-tilt sensor, and microcontroller send a wireless ESP-NOW command to the RX wheelchair base, which drives motors and checks an ultrasonic sensor for obstacles.</desc>
+
+<rect x="0" y="0" width="800" height="460" fill="#ffffff"/>
+
+<!-- TX container -->
+<rect x="30" y="40" width="330" height="320" rx="16" fill="#eef4fc" stroke="#3878c4" stroke-width="1.2"/>
+<text x="195" y="72" font-family="Arial, sans-serif" font-size="17" font-weight="600" fill="#0c447c" text-anchor="middle">TX — Glasses (wearable)</text>
+
+<rect x="55" y="95" width="280" height="50" rx="8" fill="#ffffff" stroke="#3878c4" stroke-width="0.8"/>
+<text x="195" y="116" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#0c447c" text-anchor="middle">2x IR eye-blink sensors</text>
+<text x="195" y="134" font-family="Arial, sans-serif" font-size="11.5" fill="#3a3a3a" text-anchor="middle">detect left / right / both-eye blinks</text>
+
+<rect x="55" y="158" width="280" height="50" rx="8" fill="#ffffff" stroke="#3878c4" stroke-width="0.8"/>
+<text x="195" y="179" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#0c447c" text-anchor="middle">MPU-6050 IMU</text>
+<text x="195" y="197" font-family="Arial, sans-serif" font-size="11.5" fill="#3a3a3a" text-anchor="middle">detects head tilt — fwd / back / left / right</text>
+
+<rect x="55" y="221" width="280" height="50" rx="8" fill="#ffffff" stroke="#3878c4" stroke-width="0.8"/>
+<text x="195" y="242" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#0c447c" text-anchor="middle">WeMos D1 Mini (ESP8266)</text>
+<text x="195" y="260" font-family="Arial, sans-serif" font-size="11.5" fill="#3a3a3a" text-anchor="middle">combines tilt + blink, sends ESP-NOW command</text>
+
+<rect x="55" y="284" width="280" height="50" rx="8" fill="#ffffff" stroke="#3878c4" stroke-width="0.8"/>
+<text x="195" y="305" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#0c447c" text-anchor="middle">LiPo battery + pushbutton</text>
+<text x="195" y="323" font-family="Arial, sans-serif" font-size="11.5" fill="#3a3a3a" text-anchor="middle">power + pause/resume control</text>
+
+<!-- RX container -->
+<rect x="440" y="40" width="330" height="320" rx="16" fill="#fdf1ea" stroke="#d9742a" stroke-width="1.2"/>
+<text x="605" y="72" font-family="Arial, sans-serif" font-size="17" font-weight="600" fill="#854f0b" text-anchor="middle">RX — Wheelchair base</text>
+
+<rect x="465" y="95" width="280" height="50" rx="8" fill="#ffffff" stroke="#d9742a" stroke-width="0.8"/>
+<text x="605" y="116" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#854f0b" text-anchor="middle">WeMos D1 Mini (ESP8266)</text>
+<text x="605" y="134" font-family="Arial, sans-serif" font-size="11.5" fill="#3a3a3a" text-anchor="middle">receives command, drives motors via L298N</text>
+
+<rect x="465" y="158" width="280" height="50" rx="8" fill="#ffffff" stroke="#d9742a" stroke-width="0.8"/>
+<text x="605" y="179" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#854f0b" text-anchor="middle">L298N + 2x DC gear motors</text>
+<text x="605" y="197" font-family="Arial, sans-serif" font-size="11.5" fill="#3a3a3a" text-anchor="middle">forward / backward / left / right drive</text>
+
+<rect x="465" y="221" width="280" height="50" rx="8" fill="#ffffff" stroke="#d9742a" stroke-width="0.8"/>
+<text x="605" y="242" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#854f0b" text-anchor="middle">HC-SR04 ultrasonic sensor</text>
+<text x="605" y="260" font-family="Arial, sans-serif" font-size="11.5" fill="#3a3a3a" text-anchor="middle">blocks forward motion within 20cm</text>
+
+<rect x="465" y="284" width="280" height="50" rx="8" fill="#ffffff" stroke="#d9742a" stroke-width="0.8"/>
+<text x="605" y="305" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#854f0b" text-anchor="middle">2x 18650 battery + status LEDs</text>
+<text x="605" y="323" font-family="Arial, sans-serif" font-size="11.5" fill="#3a3a3a" text-anchor="middle">power + connection/active state display</text>
+
+<!-- ESP-NOW link -->
+<line x1="360" y1="200" x2="440" y2="200" stroke="#888780" stroke-width="2" stroke-dasharray="6 5"/>
+<polygon points="436,194 448,200 436,206" fill="#888780"/>
+<text x="400" y="180" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#444441" text-anchor="middle">ESP-NOW</text>
+<text x="400" y="222" font-family="Arial, sans-serif" font-size="10.5" fill="#5f5e5a" text-anchor="middle">peer-to-peer, no router/internet</text>
+
+<!-- caption -->
+<text x="400" y="405" font-family="Arial, sans-serif" font-size="13" fill="#444441" text-anchor="middle">Head tilt + blink pattern on TX -&gt; single wireless command -&gt; RX drives or stops the wheelchair</text>
+<text x="400" y="428" font-family="Arial, sans-serif" font-size="11" fill="#888780" text-anchor="middle">EyeLink — Humanix Tech Lab</text>
+</svg>

@@ -1,0 +1,14 @@
+# Arduino IDE build artifacts
+*.hex
+*.elf
+*.bin
+build/
+.vscode/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor backups
+*~
+*.bak

@@ -1,0 +1,193 @@
+[00:00 - 00:40]
+
+Head movements and eye blinks use chesi wheelchair ni control cheyagalama?
+
+Ide EyeLink.
+
+Direction select cheyadaniki head tilt.
+
+Movement confirm cheyadaniki eye blink.
+
+Forward, Backward, Left, Right movements complete wireless ga control cheyochu.
+
+Munduga build process chuddam.
+
+---
+
+[00:45 - 03:20] TX BUILD
+
+System lo most important part transmitter.
+
+Eye blink detection kosam rendu IR sensors.
+
+Processing kosam ESP8266 D1 Mini.
+
+Head gestures detect cheyadaniki MPU6050.
+
+Wiring clean ga undataniki heat shrink sleeve use chesanu.
+
+Control kosam oka push button.
+
+Power section lo LiPo battery, charging module and power switch.
+
+First testing time lo sensor response expected range lo ledu.
+
+Reason simple.
+
+Sensors, MPU and controller anni oke battery supply pai run avutunnayi.
+
+Anduke small boost converter add chesi supply voltage ni 5 volts ki increase chesanu.
+
+Tarvata response chala stable ayindi.
+
+MPU indicator light sensors ni affect cheyakunda black tape tho cover chesanu.
+
+Final ga compact wearable transmitter ready.
+
+---
+
+[03:20 - 03:25]
+
+Transmitter complete.
+
+Ippudu receiver side.
+
+---
+
+[03:25 - 07:30] RX BUILD
+
+Receiver chassis kosam PVC sheet.
+
+Movement kosam DC gear motors and L298N motor driver.
+
+Power switch, charging port and status indicators.
+
+Front side lo ultrasonic sensor.
+
+Power source ga 18650 battery pack.
+
+Cells ni spot welding tho series connection lo prepare chesanu.
+
+Ee spot welder project already channel lo available untundi.
+
+Battery protection kosam Teflon tape and heat shrink covering.
+
+Controller ga ESP8266 D1 Mini.
+
+Tarvata motors, controller, sensors and indicators anni single system ga integrate ayyai.
+
+Initially 300 RPM motors test chesanu.
+
+Speed baagane undi.
+
+Kani smooth movement and better control kosam final version lo 100 RPM motors select chesanu.
+
+Body complete ayyaka paint.
+
+Seat section ki foam and seat cover material.
+
+Final ga complete receiver module ready.
+
+---
+
+[07:30 - 07:45] FIRMWARE
+
+Firmware setup lo four simple steps.
+
+Munduga receiver MAC address note chesukovali.
+
+Tarvata MPU calibration values check cheyyali.
+
+Aa values transmitter firmware lo update cheyyali.
+
+Last ga receiver firmware upload.
+
+Complete code, circuit diagrams and documentation description lo untayi.
+
+---
+
+[07:47 - 08:20] FIRST POWER ON
+
+Munduga receiver power on.
+
+Status indicator receiver ready state ni chupistundi.
+
+Tarvata transmitter switch on chestanu.
+
+Connection establish ayyaka LED blinking start avutundi.
+
+Push button press chesina ventane active mode.
+
+Blue status LED solid ga glow avutundi.
+
+Ippudu system commands accept cheyadaniki ready.
+
+---
+
+[08:20 - 09:00] SAFETY
+
+Movement start cheyyadam easy.
+
+Safe ga stop cheyyadam inka important.
+
+Anduke dedicated halt function include chesanu.
+
+Button press chesina ventane movement complete ga stop avutundi.
+
+Malli enable chesina tarvata matrame operation continue avutundi.
+
+Communication loss aina kuda receiver automatic ga stop state loki velthundi.
+
+---
+
+[09:00 - 09:30] CALIBRATION
+
+Best accuracy kosam eye blink sensors correct position lo undali.
+
+MPU threshold values kuda user head movements ki match avvali.
+
+Small calibration better response istundi.
+
+---
+
+[09:30 - 09:50] QUESTION
+
+Oka interesting question.
+
+Mee opinion lo ee project lo most interesting part enti?
+
+Wearable glasses design aa?
+
+Wireless control aa?
+
+Leda eye blink and head gesture combination aa?
+
+Mee thoughts comments lo cheppandi.
+
+---
+
+[10:00 - 11:45] REAL WORLD TEST
+
+Ippudu real-world performance.
+
+Direction selection head tilt tho.
+
+Command confirmation eye blink tho.
+
+Forward movement.
+
+Backward movement.
+
+Left turn.
+
+Right turn.
+
+Remaining performance direct ga chudandi.
+
+---
+
+[11:45 - 12:00]
+
+No Voice Over
+
+Only End Screen + Background Music
