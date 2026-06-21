@@ -12,6 +12,7 @@ File: docs/images/01_hero_banner.jpg
 What to shoot: Your single best photo — ideally the finished glasses sitting next to or on the finished wheelchair, good lighting, clean background. This is the FIRST thing anyone sees on the repo page.
 Recommended size: 1280x720 or wider, landscape.
 -->
+
 ![EyeLink hero banner](docs/images/01_hero_banner.jpg)
 
 > A standard power wheelchair base alone runs ₹2,00,000–₹5,00,000 in India. Add a dedicated eye-gaze or head-array control system (often imported) and the total can push past ₹8,00,000–₹16,00,000. EyeLink does the same core job — hands-free wheelchair control — for around ₹2,500 (~$30) using a WeMos D1 Mini, an MPU-6050, two IR blink sensors, and ESP-NOW. Tilt your head to pick a direction, blink to confirm — the wheelchair moves.
@@ -21,9 +22,10 @@ IMAGE SLOT #2 — DEMO GIF / SHORT CLIP
 File: docs/images/02_demo.gif
 What to make: A 5-10 second looping GIF from your YouTube footage showing one full command cycle (tilt -> blink -> wheelchair moves). Use ezgif.com or ScreenToGif to convert a clip from your edited video. This is the single highest-impact addition you can make to this README — repos with a working demo gif get dramatically more engagement than ones with only static photos.
 -->
-![EyeLink demo](docs/images/02_demo.gif)
 
-🎥 **Full build + demo video:** [Watch on YouTube](https://www.youtube.com/@HumanixTechLab) *(replace with direct video link once published)*
+![EyeLink demo](docs/images/wheelchair-side.jpg)
+
+🎥 **Full build + demo video:** [Watch on YouTube](https://www.youtube.com/@HumanixTechLab) _(replace with direct video link once published)_
 
 ---
 
@@ -41,6 +43,7 @@ IMAGE SLOT #3 — SYSTEM DIAGRAM
 File: docs/images/03_system_diagram.png (or .svg)
 A simple block diagram is auto-generated for you below in docs/images/03_system_diagram.svg — you can use it as-is or replace with your own.
 -->
+
 ![System overview diagram](docs/images/03_system_diagram.svg)
 
 Full command logic, safety layers, and the comms-watchdog bug fix are documented in [`docs/EyeLink_Master_Documentation.md`](docs/EyeLink_Master_Documentation.md).
@@ -49,9 +52,9 @@ Full command logic, safety layers, and the comms-watchdog bug fix are documented
 
 ## Cost
 
-| | |
-|---|---|
-| **Total cost (finished build)** | ₹2,500 (~$30) |
+|                                                                    |                                           |
+| ------------------------------------------------------------------ | ----------------------------------------- |
+| **Total cost (finished build)**                                    | ₹2,500 (~$30)                             |
 | **Commercial equivalent (base chair + eye-gaze add-on, imported)** | ₹8,00,000–₹16,00,000+ (~$10,000–$20,000+) |
 
 Full itemized parts list with prices: see [Bill of Materials](docs/EyeLink_Master_Documentation.md#bill-of-materials).
@@ -83,7 +86,9 @@ IMAGE SLOT #5 — WIRING DIAGRAM
 File: docs/images/05_wiring_diagram.png
 What to make: A hand-drawn or Fritzing/EasyEDA wiring diagram for TX and one for RX. If you don't have Fritzing, even a clear photo of a hand-drawn diagram on paper works fine for a first version — people on GitHub/Hackaday genuinely don't mind hand-drawn schematics as long as they're legible.
 -->
+
 ![Wiring diagram](docs/images/05_wiring_diagram.png)
+![Wiring diagram](docs/images/06_wiring_diagram.png)
 
 ---
 
@@ -92,7 +97,6 @@ What to make: A hand-drawn or Fritzing/EasyEDA wiring diagram for TX and one for
 This order matters. Skipping a step is the #1 reason a freshly cloned build "does nothing."
 
 > 📷 Step-by-step Arduino IDE screenshots for this exact flashing sequence are in [docs/EyeLink_Master_Documentation.md](docs/EyeLink_Master_Documentation.md#firmware).
-
 
 1. **Get RX's MAC address** → flash `firmware/RX_MAC_Address_Finder.ino` to the RX board, copy the printed MAC.
 2. **Paste that MAC into TX** → open `firmware/TX_Glasses_FINAL.ino`, find `rxMAC[]` near the top, paste your value.
@@ -121,15 +125,15 @@ Same idea — one per RX build step.
 
 ## Files in this repo
 
-| Path | Purpose |
-|---|---|
-| `firmware/TX_Glasses_FINAL.ino` | Main glasses firmware (flash this last on TX) |
-| `firmware/RX_Wheelchair_FINAL.ino` | Main wheelchair firmware (flash this last on RX) |
-| `firmware/RX_MAC_Address_Finder.ino` | One-time helper — gets RX's MAC address |
-| `firmware/MPU6050_Calibration_Helper.ino` | One-time helper — calibrates your personal head-tilt thresholds |
-| `docs/EyeLink_Master_Documentation.md` | Full build doc: BOM, wiring, assembly, calibration, safety, troubleshooting |
-| `docs/images/` | All photos/diagrams/gifs — see [IMAGE_SHOT_LIST.md](docs/IMAGE_SHOT_LIST.md) for exactly what's needed and where |
-| `LICENSE` | MIT — free to use, modify, and even sell, with attribution appreciated |
+| Path                                      | Purpose                                                                                                          |
+| ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `firmware/TX_Glasses_FINAL.ino`           | Main glasses firmware (flash this last on TX)                                                                    |
+| `firmware/RX_Wheelchair_FINAL.ino`        | Main wheelchair firmware (flash this last on RX)                                                                 |
+| `firmware/RX_MAC_Address_Finder.ino`      | One-time helper — gets RX's MAC address                                                                          |
+| `firmware/MPU6050_Calibration_Helper.ino` | One-time helper — calibrates your personal head-tilt thresholds                                                  |
+| `docs/EyeLink_Master_Documentation.md`    | Full build doc: BOM, wiring, assembly, calibration, safety, troubleshooting                                      |
+| `docs/images/`                            | All photos/diagrams/gifs — see [IMAGE_SHOT_LIST.md](docs/IMAGE_SHOT_LIST.md) for exactly what's needed and where |
+| `LICENSE`                                 | MIT — free to use, modify, and even sell, with attribution appreciated                                           |
 
 ---
 
